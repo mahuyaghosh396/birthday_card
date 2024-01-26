@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Add this script to your HTML file -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const balloons = document.querySelectorAll(".balloon1, .balloon2, .balloon3");
+
+        balloons.forEach((balloon) => {
+            balloon.addEventListener("mouseenter", () => {
+                balloon.style.animation = "none"; // Pause the current animation
+
+                // Set a timeout to resume the animation after a certain delay (e.g., 3 seconds)
+                setTimeout(() => {
+                    balloon.style.animation = "balloons forwards infinite"; // Resume the animation
+                }, 3000);
+            });
+
+            balloon.addEventListener("mouseleave", () => {
+                balloon.style.animation = "balloons forwards infinite"; // Resume the animation
+            });
+        });
+    });
+</script>
+
+<body>
+    <div class="card">
+        <div class="outside">
+            <div class="front">
+                <p>Happy Birthday</p>
+                <div class="cake">
+                    <div class="top-layer"></div>
+                    <div class="middle-layer"></div>
+                    <div class="bottom-layer"></div>
+                    <div class="candle"></div>
+                </div>
+            </div>
+            <div class="back"><div class="marquee-container">
+                <div class="marquee"><br><br><br>MAY GOD FULLFILL
+                    <br> ALL YOUR WISHES!</div>
+            </div></div>
+        </div>
+        <div class="inside">
+            <p>Wishing you a very happy birthday filled with love and laughter</p>
+            <h1>&#127873;</h1>
+        </div>
+
+        <!-- Add a container for the balloons -->
+        <div class="balloons-container">
+            <div class="balloon balloon1"><p>H</p></div>
+            <div class="balloon balloon1"><p>A</p></div>
+            <div class="balloon balloon1"><p>P</p></div>
+            <div class="balloon balloon1"><p>P</p></div>
+            <div class="balloon balloon1"><p>Y</p></div>
+        </div>
+
+        <div class="balloons-container">
+            <div class="balloon balloon2"><p>B</p></div>
+            <div class="balloon balloon2"><p>I</p></div>
+            <div class="balloon balloon2"><p>R</p></div>
+            <div class="balloon balloon2"><p>T</p></div>
+            <div class="balloon balloon2"><p>H</p></div>
+        </div>
+
+        <div class="balloons-container">
+            <div class="balloon balloon3"><p>D</p></div>
+            <div class="balloon balloon3"><p>A</p></div>
+            <div class="balloon balloon3"><p>Y</p></div>
+            
+        </div>
+
+    </div>
+    <div class="marquee-container">
+        <div class="marquee">MAY GOD FULLFILL ALL YOUR WISHES!</div>
+    </div>
+</body>
+</html>
