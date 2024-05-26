@@ -7,12 +7,14 @@
     
     body{
         background: url("https://cdn.shopify.com/s/files/1/0257/6718/2416/files/Party-Background-green-with-presents.jpg?v=1595051600");
-        text-align:left;
-        background-repeat: no-repeat;  
-        background-attachment: fixed;
-        background-size: cover;
-        overflow: hidden;    
-        
+         background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
     
     }
     .card{
@@ -66,7 +68,7 @@
     }
 
     .box:hover::after {
-        content: 'Love you';
+        content: 'we Love you';
         text-align: center;
         display: block;
         color: red;
@@ -508,4 +510,36 @@
     .balloon:hover{
         display: none;
     }
+    @media (max-width: 768px) {
+        
+        .card {
+            width: 100%;
+            transform: rotate(0deg);
+        }
     
+        .card:hover .outside {
+            transform: rotateY(-120deg);
+        }
+    
+        .front p {
+            font-size: 16px;
+        }
+    
+        .inside h1 {
+            font-size: 24px;
+        }
+    
+        .balloons-container {
+            margin: 10px 0;
+        }
+    
+        .balloon {
+            width: 60px;
+            height: 70px;
+            line-height: 70px;
+        }
+    
+        .marquee {
+            font-size: 18px;
+        }
+    }
